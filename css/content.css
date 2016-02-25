@@ -1,0 +1,22 @@
+/* About */
+#box{width:950px; height:510px;overflow:hidden;}
+#l{width:930px; height:510px; float:left; position:relative; top:0; left;}
+#con{width:380px; position:absolute; top:0; left:0;}
+#con img{width: 930px;}
+#r{margin-left: 10px;width:6px; height:510px;float:left; background:#f5f5f5; position:relative; top:0; left:0;}
+#bar{width:6px; height:50px; background:#d2d2d2; position:absolute; top:0; left:0;}
+
+#aboutAll{display: none;}
+.aboutR{ width: 250px;}
+.aboutR .ARp1{height: 100px; width:250px;}
+.aboutR .ARp1 p{height: 36px; line-height: 36px; font-size: 16px; text-align: center; width: 72px;margin:32px 12px; border-top: 4px solid #000;border-bottom: 4px solid #000; cursor: pointer;}
+.aboutR .Click{height: 54px;width: 54px; border-radius: 50%;background: #ebebeb;margin-left: 120px; cursor: pointer;}
+.aboutR .Click1{margin-left: 14px;}
+.aboutR .Click em{height: 20px; width: 20px; border-left: 2px solid #fff; border-top: 2px solid #fff; display: block;margin-top:16px; margin-left: 20px; transform:rotate(-45deg);}
+.aboutR .Click1 em{ margin-left: 12px;transform:rotate(135deg);}
+.aboutR strong {width: 250px; height: 62px;float: left;}
+.aboutR strong p{ font-size: 24px; float: right; margin-top:10px; height: 44px; line-height: 44px; color: #7a7a7a; }
+.AboutType{height: 36px; line-height: 36px; font-size: 16px; text-align: center; width: 120px; color: #7a7a7a; border-bottom: 4px solid #e82d66; }
+.aboutR .explain{ width: 250px; float: left; padding: 50px 10px 0 30px; font-size: 12px; color: #727272;}
+.aboutR section{width: 164px; height: 38px;line-height: 38px;text-align: center; background: #2d2d2d; color: #fff;font-size: 14px;  margin-top: 50px; cursor: pointer;}
+.aboutR .explain1{padding-top: 14px;}
