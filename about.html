@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>About</title>
+	<link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/history.css">
+	<script src="js/all.js"></script>
+	<script src="js/wheel.js"></script>
+	<style>
+
+	</style>
+</head>
+<body style="overflow:-Scroll;overflow-y:hidden">
+	<div class="all all1 clearfix">
+		<div class="fl titcent" id="show">
+			<p class="TitChild1 fl">
+
+			</p>
+			<div class="TitChild2">
+				<p class="fl"></p>
+				<ul class="fr">
+					<li><a href="http://susuy.applinzi.com/">HOME</a></li>
+					<li><a href="/content.html">WORK</a></li>
+					<li><a href="/about.html">ABOUT</a></li>
+					<li><a href="/contact.html">CONTACT</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="fr titcent titcent1">
+			<div class="fl">
+				<p>
+					电商设计丨平面设计丨网页设计
+				</p>
+				<p>
+					QQ：1773976172  Photo：18810863292
+				</p>
+			</div>
+
+			<p class="fr titcent_p">
+				<a href="/content.html">刘晓静作品集</a>
+			</p>
+		</div>
+	</div>
+	<!------------------------------------------------------------内容-->
+	<div class="all_width His_tit">
+		<p class="fl ">ABOUT ME</p>
+		<p class="fl p1">Efforts may not succeed without hard work will not succeed ————————————</p>
+	</div>
+<!----------------------------------------------------------------About-->
+<div class="all_width">	
+	<div id="box">
+		<div id="l">
+	    	<div id="con">
+				<p class="His_cent1"></p>
+				<ol class="His_cenTit">
+					<li class="fl"><img src="image/Photo.jpg" alt=""></li>
+					<li class="fl">
+						<ul class="His_name">
+							<li>姓　　名：刘晓静　　北京／电商设计　平面设计　网页设计  </li>
+							<li>工作经验：４年 </li>
+							<li>专　　业：图形图像设计</li>
+							<li>籍　　贯：重庆 </li>
+							<li>毕业院校：长春工业大学(本科)</li>
+						</ul>	
+					</li>
+				</ol>
+				<p class="His_cent2"></p>
+				<ul class="His_centAll" id="His_centAll">
+					<!-- <li>
+						<p>时　　间：２０１５年９月—２０１６年１２月</p>
+						<p>公　　司：天天向上天天向上××××× </p>
+						<p>职　　位：电商设计</p>
+						<p>职　　责：负责天猫店铺设</p>
+						<em></em>
+					</li> -->
+					<script>
+					var His_centAll=document.getElementById('His_centAll');
+					var str='';
+					var arr=[
+					{
+						Time:'2015年9月—2016年12月',
+						Company:'天天向上天天向上×××××',
+						Job:'电商设计',
+						Duty:'负责天猫店铺设××××等等我们拥有西南乃至全国领先的设计团队，并在互联网端为您提供顶尖行业的呈现方式，我们采用业界领先的HTML5+CSS3技术，为您呈现出富有视觉动感与商业价值并存的桌面端'
+					},
+					{
+						Time:'2015年9月—2016年12月',
+						Company:'天天向上天天向上×××××',
+						Job:'电商设计',
+						Duty:'负责天猫店铺设××××等等我们拥有西南乃至全国领先的设计团队，并在互联网端为您提供顶尖行业的呈现方式，我们采用业界领先的HTML5+CSS3技术，为您呈现出富有视觉动感与商业价值并存的桌面端'
+					},
+					{
+						Time:'2015年9月—2016年12月',
+						Company:'天天向上天天向上×××××',
+						Job:'电商设计',
+						Duty:'负责天猫店铺设××××等等我们拥有西南乃至全国领先的设计团队，并在互联网端为您提供顶尖行业的呈现方式，我们采用业界领先的HTML5+CSS3技术，为您呈现出富有视觉动感与商业价值并存的桌面端'
+					}
+					]
+					for (var i = 0; i < arr.length; i++) {
+						str+='<li>'
+							+'<p>时　　间：'+arr[i].Time+'</p>'
+							+'<p>公　　司：'+arr[i].Company+'</p>'
+							+'<p>职　　位：'+arr[i].Job+'</p>'
+							+'<p>职　　责：'+arr[i].Duty+'</p>'
+							+'<em></em>'
+						+'</li>'
+					};
+					His_centAll.innerHTML=str;
+					</script>
+				</ul>
+	        </div>
+	    </div>
+	    <div id="r">
+	    	<div id="bar"></div>
+	    </div>
+	</div>
+</div>
+
+	<script>
+		HeaderArea('show');
+
+		window.onload=function(){
+			var oBox = document.getElementById('box');
+			var oL = document.getElementById('l');
+			var oCon = document.getElementById('con');
+			var oR = document.getElementById('r');
+			var oBar = document.getElementById('bar');
+			oBar.onmousedown=function(ev){
+				var oEvent = ev||event;
+				var disY = oEvent.clientY-oBar.offsetTop;
+				document.onmousemove=function(ev){
+					var oEvent = ev||event;
+					var t = oEvent.clientY-disY;
+					changeTop(t);
+				};
+				document.onmouseup=function(){
+					document.onmousemove=null;
+					document.onmouseup=null;;
+					oBar.releaseCapture&&oBar.releaseCapture();
+				};
+				oBar.setCapture&&oBar.setCapture();
+				return false;
+			};
+			function changeTop(t){
+				if(t<0){
+					t=0;
+				}else if(t>oR.offsetHeight-oBar.offsetHeight){
+					t = oR.offsetHeight-oBar.offsetHeight;
+				}
+				oBar.style.top = t+'px';
+				var scale = t/(oR.offsetHeight-oBar.offsetHeight);
+				oCon.style.top = (oL.offsetHeight-oCon.scrollHeight)*scale+'px';
+			}
+			addWheel(oBox,function(bDir){
+				var t = oBar.offsetTop;
+				if(bDir){
+					t+=10;
+				}else{
+					t-=10;
+				}
+				changeTop(t);
+			});
+		};
+
+	</script>
+</body>
+</html>

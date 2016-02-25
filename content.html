@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>content</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/content.css">
+	<script src="js/all.js"></script>
+	<script src="js/wheel.js"></script>
+	<style>
+
+	</style>
+</head>
+<body>
+	<div class="all all1 clearfix">
+		<div class="fl titcent" id="show">
+			<p class="TitChild1 fl">
+
+			</p>
+			<div class="TitChild2">
+				<p class="fl"></p>
+				<ul class="fr">
+					<li><a href="http://susuy.applinzi.com/">HOME</a></li>
+					<li><a href="/content.html">WORK</a></li>
+					<li><a href="/about.html">ABOUT</a></li>
+					<li><a href="/contact.html">CONTACT</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="fr titcent titcent1">
+			<div class="fl">
+				<p>
+					电商设计丨平面设计丨网页设计
+				</p>
+				<p>
+					QQ：1773976172  Photo：18810863292
+				</p>
+			</div>
+
+			<p class="fr titcent_p">
+				<a href="/content.html">刘晓静作品集</a>
+			</p>
+		</div>
+	</div>
+	<!------------------------------------------------------------内容-->
+	<ul class="Cent clearfix" id="CentSetUp">
+		<script>
+		var CentSetUp=document.getElementById('CentSetUp');
+		var arr=[{Type:'电商作品',Name:'双十一电商作品',date:'2015-11'},
+				{Type:'主站作品',Name:'双十一作品',date:'2015-10'},
+				{Type:'主站作品',Name:'双十一作品',date:'2015-10'},
+				{Type:'主站作品',Name:'双十一作品',date:'2015-10'},
+				{Type:'主站作品',Name:'双十一作品',date:'2015-10'},
+				{Type:'主站作品',Name:'双十一作品',date:'2015-10'},
+				{Type:'主站作品',Name:'双十一作品',date:'2015-10'},
+				{Type:'主站作品',Name:'双十一作品',date:'2015-10'},
+				{Type:'主站作品',Name:'双十一作品',date:'2015-10'},
+				{Type:'主站作品',Name:'双十一作品',date:'2015-10'},
+				{Type:'主站作品',Name:'双十一作品',date:'2015-10'},
+				{Type:'主站作品',Name:'双十一作品',date:'2015-10'}]
+			/*
+			*Introduce:介绍内容
+			*Type:类型
+			*Name:名称
+			*url:链接地址
+			 */
+		var AboutArr=[{Introduce:'蓝海世纪影业立学习发达国家电影工业化产业发展的模式和经验，结合中国实践',Type:'WEB DESIGN',Name:'天猫双十一',url:'http://www.myyqq.cn'},
+		{Introduce:'以宽阔的眼界突破角落的思维，学习发达国家电影工业化产业发展的模式和经验，结合中国实践',Type:'WEB DESIGN',Name:'天猫双十二',url:'http://www.baidu.com'},
+		{Introduce:'西部，争鸣全国，以宽阔的眼界突破角落的思维，学习发达国家电影工业化产业发展的模式和经验，结合中国实践',Type:'WEB DESIGN',Name:'天猫双十三',url:'http://www.youku.com'},
+		{Introduce:'海世纪影业立足重庆，志在西部，争鸣全国，以宽阔的眼界突破角落的思维，学习发达国家电影工业化产业发展的模式和经验，结合中国实践',Type:'WEB DESIGN',Name:'天猫双十四',url:'http://www.taobao.com'},
+		{Introduce:'蓝宽阔的眼界突破角落的思维，学习发达国家电影工业化产业发展的模式和经验，结合中国实践',Type:'WEB DESIGN',Name:'天猫双十五',url:'http://www.myyqq.cn'}]
+		for (var i = 0; i < arr.length; i++) {
+			var aLi=document.createElement('li');
+			aLi.innerHTML='<a href="javascript:;">'+
+				'<img src="image/'+i+'.jpg"alt="">'+
+				'<p class="CentP">'+
+					'<em>VIEW MONE</em>'+
+				'</p>'+
+			'</a>'+
+			'<div class="CentAbout">'+
+				'<p>'+arr[i].Type+'</p>'+
+				'<p class="CAp">'+arr[i].Name+'</p>'+
+				'<p>'+arr[i].date+'</p>'+
+			'</div>'
+			aLi.className='fl';
+			CentSetUp.appendChild(aLi);
+		};
+
+
+		var aLi=CentSetUp.children;
+		for (var i = 0; i < aLi.length; i++) {
+			aLi[i].index=i;
+			aLi[i].onmouseover=function(){
+
+				var CentA=aLi[this.index].children[0];
+				var ObackG=aLi[this.index].children[1];
+				var ObackGAp=ObackG.children;
+				window.AboutNum=this.index-1;
+				//alert(window.AboutNum);
+				CentA.lastChild.style.display='block';
+				CentA.firstChild.style.webkitTransform='scale(1.8) rotate(18deg)';
+				ObackG.style.backgroundColor='#d0416d';
+				for (var i = 0; i < ObackGAp.length; i++) {
+					ObackGAp[i].style.color='#fff';
+				};
+				this.onclick=function(){
+					//alert(window.AboutNum);
+					this.parentNode.style.display='none';
+					AboutAll.style.display='block';
+					if(window.AboutNum>AboutArr.length-1){
+						AboutAll.innerHTML='<h3>文件维护中OR访问文件内容不存在有点小懒... 有些事你懂得...</h3><div class="fr aboutR">'+
+						'<div class="ARp1">'+
+							'<p class="fr" id="AboutClose">CLOSE</p>'+
+							'</div></div>';
+						var AboutClose=document.getElementById('AboutClose');
+						AboutClose.onclick=function(){
+							CentSetUp.style.display='block';
+							AboutAll.style.display='none';
+						}
+					}else{
+
+
+					AboutAll.innerHTML='<div id="box" class="fl">'+
+						'<div id="l">'+
+					    	'<div id="con">'+
+					        	'<img src="images/about'+window.AboutNum+'.jpg" alt="">'+
+					        '</div>'+
+					    '</div>'+
+					    '<div id="r">'+
+					    	'<div id="bar"></div>'+
+					    '</div>'+
+					'</div>'+
+					'<div class="fr aboutR">'+
+						'<div class="ARp1">'+
+							'<p class="fr" id="AboutClose">CLOSE</p>'+
+						'</div>'+
+						'<div class="Click fl" id="AboutLeft"><em></em></div>'+
+						'<div class="Click Click1 fl"><em></em></div>'+
+						'<strong><p>'+AboutArr[window.AboutNum].Name+'</p></strong>'+
+						'<p class="AboutType fr">'+AboutArr[window.AboutNum].Type+'</p>'+
+						'<p id="introduce" class="explain">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+AboutArr[window.AboutNum].Introduce+'</p>'+
+						'<section class="fr">Browse</section>'+
+						'<p class="explain explain1">注：当链接打开不是此页面设计时， 页面已经更新，以此页面设计为准。</p>'+
+					'</div>';
+					AboutShow();
+
+					}
+				}
+
+				this.onmouseout=function(){
+					CentA.lastChild.style.display='none';
+					CentA.firstChild.style.webkitTransform='scale(1) rotate(0deg)';
+					ObackG.style.backgroundColor='#eee';
+					for (var i = 0; i < ObackGAp.length; i++) {
+						ObackGAp[i].style.color='#727272';
+					};
+				}
+			}
+		};
+
+		</script>
+	</ul>
+
+<!----------------------------------------------------------------About-->
+	<div class="Cent clearfix" id="aboutAll">
+		<!--  <div id="box" class="fl">
+					<div id="l">
+		   	<div id="con">
+		       	<img src="images/about4.jpg" alt="">
+		       </div>
+		   </div>
+		   <div id="r">
+		   	<div id="bar"></div>
+		   </div>
+				</div>
+				<div class="fr aboutR">
+					<div class="ARp1">
+						<p class="fr" id="AboutClose">CLOSE</p>
+					</div>
+					<div class="Click fl" id="AboutLeft"><em></em></div>
+					<div class="Click Click1 fl"><em></em></div>
+					<strong><p>天猫双十一</p></strong>
+					<p class="AboutType fr">WEB DESIGN</p>
+					<p id="introduce" class="explain">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp蓝海世纪影业立足重庆，志在西部，争鸣全国，以宽阔的眼界突破角落的思维，学习发达国家电影工业化产业发展的模式和经验，结合中国实践
+					</p>
+					<section class="fr">Browse</section>
+					<p class="explain explain1">注：当链接打开不是此页面设计时， 页面已经更新，以此页面设计为准。</p>
+				</div>  -->
+	</div>
+	<script>
+		HeaderArea('show');
+		var AboutAll=document.getElementById('aboutAll');
+
+		function AboutShow(){
+			var oBox = document.getElementById('box');
+			var oCon = document.getElementById('con');
+			var oL = document.getElementById('l');
+			var oR = document.getElementById('r');
+			var oBar = document.getElementById('bar');
+			oBar.onmousedown=function(ev){
+				var oEvent = ev||event;
+				var disY = oEvent.clientY-oBar.offsetTop;
+				document.onmousemove=function(ev){
+					var oEvent = ev||event;
+					var t = oEvent.clientY-disY;
+					changeTop(t);
+				};
+				document.onmouseup=function(){
+					document.onmousemove=null;
+					document.onmouseup=null;;
+					oBar.releaseCapture&&oBar.releaseCapture();
+				};
+				oBar.setCapture&&oBar.setCapture();
+				return false;
+			};
+			function changeTop(t){
+				if(t<0){
+					t=0;
+				}else if(t>oR.offsetHeight-oBar.offsetHeight){
+					t = oR.offsetHeight-oBar.offsetHeight;
+				}
+				oBar.style.top = t+'px';
+				var scale = t/(oR.offsetHeight-oBar.offsetHeight);
+				oCon.style.top = (oL.offsetHeight-oCon.scrollHeight)*scale+'px';
+			}
+			addWheel(oBox,function(bDir){
+				var t = oBar.offsetTop;
+				if(bDir){
+					t+=10;
+				}else{
+					t-=10;
+				}
+				changeTop(t);
+			});
+						//About内容;;;;;;;;;;;;
+			var oIntroduce=document.getElementById('introduce');
+			var AboutType=oIntroduce.previousElementSibling||oIntroduce.previousSibling;
+			var AboutClick=oIntroduce.nextElementSibling||oIntroduce.nextSibling;
+			var AboutName=AboutType.previousElementSibling.children[0]||AboutType.previousSibling.children[0];
+			var AboutClose=document.getElementById('AboutClose');
+			var AboutLeft=document.getElementById('AboutLeft');
+			var AboutRight=AboutLeft.nextElementSibling||AboutLeft.nextSibling;
+			var i1=oCon.innerHTML.match(/\d/g);
+			var i=i1.join('').split();
+			var AboutLength=window.AboutNum;				//图片文件下标；
+
+
+
+			AboutLeft.onmouseover=function(){
+				this.style.backgroundColor='#d0416d';
+				AboutLeft.onclick=function(){
+					i--;
+					if(i<0){i=AboutArr.length-1};
+					oCon.innerHTML='<img src="images/about'+i+'.jpg" alt="">';
+					oIntroduce.innerHTML='&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+AboutArr[i].Introduce;
+					AboutType.innerHTML=AboutArr[i].Type;
+					AboutName.innerHTML=AboutArr[i].Name;
+
+					oCon.style.top='0px';
+					oBar.style.top='0px';
+				}
+			}
+			AboutLeft.onmouseout=function(){
+				this.style.backgroundColor='#ebebeb';
+			}
+			AboutRight.onmouseover=function(){
+				AboutRight.onclick=function(){
+					i++;
+					if(i>AboutArr.length-1){i=0};
+					oCon.innerHTML='<img src="images/about'+i+'.jpg" alt="">';
+					oIntroduce.innerHTML='&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+AboutArr[i].Introduce;
+					AboutType.innerHTML=AboutArr[i].Type;
+					AboutName.innerHTML=AboutArr[i].Name;
+					oCon.style.top='0px';
+					oBar.style.top='0px';
+				}
+				this.style.backgroundColor='#d0416d';
+			}
+			AboutRight.onmouseout=function(){
+				this.style.backgroundColor='#ebebeb';
+			}
+			AboutClick.onclick=function(){
+				window.open(AboutArr[i].url);
+			}
+			AboutClose.onclick=function(){
+				CentSetUp.style.display='block';
+				AboutAll.style.display='none';
+			}
+		}
+	</script>
+</body>
+</html>
