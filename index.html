@@ -1,3 +1,75 @@
-hellow world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HOME</title>
+	<link rel="stylesheet" href="css/index.css">
+	<base target="_blank"/>
+</head>
+<body style="overflow:-Scroll;overflow-y:hidden">
+	<div class="all clearfix">
+		<div class="fl titcent">
+			<p>
+				THE NEED OF BOLE CHOLLIMA
+			</p>
+			<p>
+				工作经验：4年      专业：图形图像设计
+			</p>
+			<p class="titcent_p">
+				<a href="/about.html">了解更多＞＞</a>
+			</p>
+		</div>
+		<div class="fr titcent titcent1">
+			<div class="fl">
+				<p>
+					电商设计丨平面设计丨网页设计
+				</p>
+				<p>
+					QQ：1773976172  Photo：18810863292
+				</p>
+			</div>
 
-SuSuy
+			<p class="fr titcent_p">
+				<a href="/content.html">刘晓静作品集</a>
+			</p>
+		</div>
+		<footer class="footIndex" id="toGo">
+			<a href="/content.html"></a>
+		</footer>
+		<div class="all_width cent">
+			<img src="image/self_03.png"  alt="">
+		</div>
+	</div>
+	<script>
+	window.onload=function(){
+		var toGo=document.getElementById('toGo');
+		var IndexTimer=null;
+		var IndexNum=0;
+		toGo.onmouseover=function(){
+			var _this=this;
+			clearInterval(IndexTimer);
+			IndexTimer=setInterval(function(){
+				IndexNum-=2;
+				if (IndexNum<=-25) {
+					clearInterval(IndexTimer);
+					IndexNum=-25;
+				};
+				_this.style.backgroundPosition='0 '+IndexNum+'px';
+			},30)
+		}
+		toGo.onmouseout=function(){
+			var _this=this;
+			clearInterval(IndexTimer);
+			IndexTimer=setInterval(function(){
+				IndexNum+=2;
+				if (IndexNum>=0) {
+					clearInterval(IndexTimer);
+					IndexNum=0;
+				};
+				_this.style.backgroundPosition='0 '+IndexNum+'px';
+			},30)
+		}
+	}
+	</script>
+</body>
+</html>
