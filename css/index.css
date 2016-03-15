@@ -17,7 +17,7 @@ input,textarea{ outline:none; }
 
 
 /* index.css */
-.all{height: 100%;width:100%; background: url(../image/self_01.jpg) no-repeat 100% 100%; position: relative;}
+.all{height: 100%;width:100%; background: url(../image/self_01.jpg); position: relative;}
 .all_width{ width: 1200px; margin:0 auto;}
 
 
