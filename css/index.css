@@ -29,14 +29,14 @@ input,textarea{ outline:none; }
 .titcent .titcent_p{ width:130px; background: #2d2d2d; text-align: center;}
 .titcent .titcent_p a {height: 100%;width: 100%;display:block; color: #d1d1d1;}
 .titcent .titcent_p a:hover {color: #fff;}
-.titcent1 {width: 438px; padding-top: 60px;}
+.titcent1 {width: 500px; padding-top: 60px;}
 .footIndex{ height: 24px; width: 48px; background: url(../image/icon.png); position: relative;z-index:3;bottom:-80%; left: 50%; margin-left: -24px;}
 .footIndex a{ height: 100%;width:100%; display: block;}
 
 /* center */
 .all1{background:rgba(255,255,255,0.5); height:120px;position: relative;}
 .all1 .titcent{width: 234px;padding:60px; position: absolute; z-index: 2;}
-.all1 .titcent1 {width: 438px; padding-top: 60px;position: absolute;right: 0;top: 0;}
+.all1 .titcent1 {width: 500px; padding-top: 60px;position: absolute;right: 0;top: 0;}
 .titcent .TitChild1{ height:54px; width: 54px;background: url(../image/icon.png) 0 -50px;margin-top: 10px;}
 .titcent .TitChild2{ height: 100%;display: none; }
 .titcent .TitChild2 p{ height:54px; width: 54px;background: url(../image/icon.png) 0 -110px;margin-top: 10px;}
