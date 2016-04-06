@@ -78,7 +78,11 @@
 				window.AboutNum=this.index-1;
 				//alert(window.AboutNum);
 				CentA.lastChild.style.display='block';
-				CentA.firstChild.style.webkitTransform='scale(1.8) rotate(18deg)';
+				CentA.firstChild.style.WebkitTransform='scale(1.8) rotate(18deg)';
+				CentA.firstChild.style.MsTransform='scale(1.8) rotate(18deg)';
+				CentA.firstChild.style.OTransform='scale(1.8) rotate(18deg)';
+				CentA.firstChild.style.MozTransform='scale(1.8) rotate(18deg)';
+				CentA.firstChild.style.Transform='scale(1.8) rotate(18deg)';
 				ObackG.style.backgroundColor='#d0416d';
 				for (var i = 0; i < ObackGAp.length; i++) {
 					ObackGAp[i].style.color='#fff';
@@ -129,7 +133,11 @@
 
 				this.onmouseout=function(){
 					CentA.lastChild.style.display='none';
-					CentA.firstChild.style.webkitTransform='scale(1) rotate(0deg)';
+					CentA.firstChild.style.WebkitTransform='scale(1) rotate(0deg)';
+					CentA.firstChild.style.MozTransform='scale(1) rotate(0deg)';
+					CentA.firstChild.style.OTransform='scale(1) rotate(0deg)';
+					CentA.firstChild.style.MsTransform='scale(1) rotate(0deg)';
+					CentA.firstChild.style.Transform='scale(1) rotate(0deg)';
 					ObackG.style.backgroundColor='#eee';
 					for (var i = 0; i < ObackGAp.length; i++) {
 						ObackGAp[i].style.color='#727272';
