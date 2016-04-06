@@ -24,7 +24,7 @@ input,textarea{ outline:none; }
 
 .cent{position: relative; height: 100% ; width:100%;}
 .cent img{position: absolute; top: 50%;left: 50%;margin-top: -102px; margin-left: -350px;}
-.titcent{width: 300px; font-size: 16px; padding:100px; position: relative; z-index: 2;}
+.titcent{width: 300px; font-size: 16px; padding:100px 0 0 100px; position: relative; z-index: 2;}
 .titcent p{height:30px; line-height: 30px; color: #a1a1a1; }
 .titcent .titcent_p{ width:130px; background: #2d2d2d; text-align: center;}
 .titcent .titcent_p a {height: 100%;width: 100%;display:block; color: #d1d1d1;}
